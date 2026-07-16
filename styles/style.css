@@ -1,0 +1,187 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===========================
+   APP BACKGROUND
+=========================== */
+
+.stApp {
+    background: #FFF8F2;
+}
+
+/* ===========================
+   REMOVE DEFAULT STREAMLIT PADDING
+=========================== */
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.main-title {
+    font-size: 46px;
+    font-weight: 700;
+    color: #8E5A3C;
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #7A7A7A;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   METRIC CARD
+=========================== */
+
+.metric-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    border-left: 6px solid #E67E22;
+
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+
+    min-height: 190px;
+
+    text-align: center;
+}
+
+.metric-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0px 18px 32px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   CARD TITLE
+=========================== */
+
+.card-title {
+
+    font-size: 18px;
+
+    color: #777777;
+
+    margin-top: 12px;
+}
+
+/* ===========================
+   CARD VALUE
+=========================== */
+
+.card-value {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+/* ===========================
+   STATUS BOXES
+=========================== */
+
+.stAlert {
+
+    border-radius: 15px;
+}
+
+/* ===========================
+   COLUMN SPACING
+=========================== */
+
+div[data-testid="stHorizontalBlock"] {
+
+    gap: 20px;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+section[data-testid="stSidebar"] {
+
+    background-color: #F5EBDD;
+}
+
+section[data-testid="stSidebar"] * {
+
+    color: #4E342E;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.stButton > button {
+
+    background: #E67E22;
+
+    color: white;
+
+    border-radius: 10px;
+
+    border: none;
+
+    padding: 0.6rem 1.2rem;
+
+    font-weight: 600;
+}
+
+.stButton > button:hover {
+
+    background: #D35400;
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+hr {
+
+    border: 1px solid #F1E0CF;
+}
+
+/* Hide Streamlit Header */
+
+header[data-testid="stHeader"]{
+    background: transparent;
+    height:0;
+}
+
+div[data-testid="stToolbar"]{
+    visibility:hidden;
+}
+
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+.page-header{
+    margin-bottom:40px;
+}
