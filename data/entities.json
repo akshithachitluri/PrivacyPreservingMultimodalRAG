@@ -1,0 +1,30 @@
+[
+    {
+        "text": "John Doe",
+        "label": "PERSON"
+    },
+    {
+        "text": "Microsoft",
+        "label": "ORG"
+    },
+    {
+        "text": "Hyderabad",
+        "label": "GPE"
+    },
+    {
+        "text": "9876543210",
+        "label": "CARDINAL"
+    },
+    {
+        "text": "15 July 2026",
+        "label": "DATE"
+    },
+    {
+        "text": "john.doe@gmail.com",
+        "label": "EMAIL"
+    },
+    {
+        "text": "9876543210",
+        "label": "PHONE"
+    }
+]

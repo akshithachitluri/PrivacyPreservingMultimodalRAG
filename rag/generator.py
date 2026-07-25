@@ -1,14 +1,17 @@
 import os
-import google.generativeai as genai
+from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-genai.configure(
-    api_key=os.getenv("GOOGLE_API_KEY")
-)
+key = os.getenv("OPENROUTER_API_KEY")
+print("API KEY:", key)
 
-model = genai.GenerativeModel("gemini-2.0-flash")
+client = OpenAI(
+    api_key=key,
+    base_url="https://openrouter.ai/api/v1"
+)
+MODEL = "openrouter/auto"
 
 def generate_answer(question, chunks):
 
@@ -19,7 +22,8 @@ You are a helpful assistant.
 
 Answer ONLY using the provided context.
 
-If the answer is not found, say:
+If the answer is not found, reply exactly:
+
 "I could not find the answer in the uploaded documents."
 
 Context:
@@ -31,6 +35,14 @@ Question:
 Answer:
 """
 
-    response = model.generate_content(prompt)
+    response = client.chat.completions.create(
+        model=MODEL,
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    )
 
-    return response.text
+    return response.choices[0].message.content
